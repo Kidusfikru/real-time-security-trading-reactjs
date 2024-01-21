@@ -66,10 +66,18 @@ const Amount = ({
           }}
         >
           <CardContent>
-            <Typography variant="h5" component="div" sx={{ mb: 1.5 }}>
+            <Typography
+              variant="h5"
+              component="div"
+              sx={{ mb: 1.5, fontSize: ["1rem", "1.5rem", "2rem"] }}
+            >
               {selectedSecurityType}
             </Typography>
-            <Typography sx={{ mb: 1.5 }} color="white">
+            <Typography
+              component="div"
+              sx={{ mb: 1.5, fontSize: ["1rem", "1.5rem", "2rem"] }}
+              color="white"
+            >
               {selectedSecurityType
                 ? selectedSecurityType
                 : "Select security type"}

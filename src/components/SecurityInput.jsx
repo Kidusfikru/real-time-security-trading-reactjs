@@ -90,19 +90,20 @@ const SecurityInput = ({
               }}
             />
           </Grid>
-          <Grid item xs={2.3}>
+          <Grid item xs={2}>
             <MD3Button
               variant={selected === "Market" ? "outlined" : "filled"}
               sx={{
                 color: "white",
                 fontSize: ["0.8rem", "1rem", "1.2rem"],
+                marginRight: "5px",
               }}
               onClick={() => handleTradeTypeChange("Market")}
             >
               Market
             </MD3Button>
           </Grid>
-          <Grid item xs={2.3}>
+          <Grid item xs={2}>
             <MD3Button
               variant={selected === "Limit" ? "outlined" : "filled"}
               sx={{
@@ -114,7 +115,7 @@ const SecurityInput = ({
               Limit
             </MD3Button>
           </Grid>
-          <Grid item xs={2.3}>
+          <Grid item xs={2}>
             <MD3Button
               variant={selected === "Stop" ? "outlined" : "filled"}
               sx={{
