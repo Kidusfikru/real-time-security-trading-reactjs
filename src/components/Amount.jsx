@@ -66,18 +66,10 @@ const Amount = ({
           }}
         >
           <CardContent>
-            <Typography
-              variant="h5"
-              component="div"
-              sx={{ mb: 1.5, fontSize: ["1rem", "1.5rem", "2rem"] }}
-            >
+            <Typography variant="h5" component="div" sx={{ mb: 1.5 }}>
               {selectedSecurityType}
             </Typography>
-            <Typography
-              component="div"
-              sx={{ mb: 1.5, fontSize: ["1rem", "1.5rem", "2rem"] }}
-              color="white"
-            >
+            <Typography sx={{ mb: 1.5 }} color="white">
               {selectedSecurityType
                 ? selectedSecurityType
                 : "Select security type"}
@@ -96,6 +88,9 @@ const Amount = ({
               marginTop: "auto",
               marginBottom: "auto",
               animation: "blink 2s infinite",
+              "@media (max-width:600px)": {
+                marginLeft: "auto",
+              },
             }}
           />
 
@@ -105,7 +100,10 @@ const Amount = ({
               component="div"
               sx={{
                 mt: 1.5,
-                fontSize: ["1rem", "1.5rem", "2rem"],
+                "@media (max-width:600px)": {
+                  fontSize: "20px",
+                  marginLeft: "auto",
+                },
               }}
             >
               {selectedSecurityType

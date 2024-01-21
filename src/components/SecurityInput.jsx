@@ -90,37 +90,42 @@ const SecurityInput = ({
               }}
             />
           </Grid>
-          <Grid item xs={2}>
+          <Grid item xs={2.3}>
             <MD3Button
               variant={selected === "Market" ? "outlined" : "filled"}
               sx={{
                 color: "white",
-                fontSize: ["0.8rem", "1rem", "1.2rem"],
-                marginRight: "5px",
+                "@media (max-width:600px)": {
+                  width: "5%",
+                },
               }}
               onClick={() => handleTradeTypeChange("Market")}
             >
               Market
             </MD3Button>
           </Grid>
-          <Grid item xs={2}>
+          <Grid item xs={2.3}>
             <MD3Button
               variant={selected === "Limit" ? "outlined" : "filled"}
               sx={{
                 color: "white",
-                fontSize: ["0.8rem", "1rem", "1.2rem"],
+                "@media (max-width:600px)": {
+                  width: "5%",
+                },
               }}
               onClick={() => handleTradeTypeChange("Limit")}
             >
               Limit
             </MD3Button>
           </Grid>
-          <Grid item xs={2}>
+          <Grid item xs={2.3}>
             <MD3Button
               variant={selected === "Stop" ? "outlined" : "filled"}
               sx={{
                 color: "white",
-                fontSize: ["0.8rem", "1rem", "1.2rem"],
+                "@media (max-width:600px)": {
+                  width: "5%",
+                },
               }}
               onClick={() => handleTradeTypeChange("Stop")}
             >
