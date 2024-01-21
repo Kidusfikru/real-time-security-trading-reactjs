@@ -51,14 +51,17 @@ const Amount = ({
       <Box>
         <Card
           sx={{
-            minWidth: 275,
+            maxHeight: "100px",
             display: "flex",
             flexDirection: "column",
             marginTop: "15px",
-            backgroundColor: "#333", // Dark background color
-            color: "#fff", // Light text color
+            backgroundColor: "#333",
+            color: "#fff",
+            "@media (max-width:600px)": {
+              flexDirection: "row",
+            },
             "@media (min-width:600px)": {
-              flexDirection: "row", // Switch to row layout for screens larger than 600px
+              flexDirection: "row",
             },
           }}
         >
@@ -89,7 +92,14 @@ const Amount = ({
           />
 
           <CardContent sx={{ marginLeft: "auto" }}>
-            <Typography variant="h3" component="div" sx={{ mt: 1.5 }}>
+            <Typography
+              variant="h3"
+              component="div"
+              sx={{
+                mt: 1.5,
+                fontSize: ["1rem", "1.5rem", "2rem"],
+              }}
+            >
               {selectedSecurityType
                 ? `$ ${formattedPrice !== null ? formattedPrice : "-"}`
                 : "$ - -"}
